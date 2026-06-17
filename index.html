@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinu Baba Dance Academy</title>
+    <style>
+        /* RESET & BASE */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Jim+Nightshade&family=Mea+Culpa&family=UnifrakturMaguntia&display=swap');
+
+        /* BODY */
+        body {
+            font-family: "Mea Culpa", cursive;
+            background: #0f0f0f;
+            color: white;
+            font-size: 22px;
+        }
+
+        /* NAVBAR */
+        #navbar {
+            background: white;
+            padding: 18px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        #navbar ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            list-style: none;
+            gap: 35px;
+            margin-left: 20px;
+        }
+
+        #navbar ul li a {
+            text-decoration: none;
+            color: aqua;
+            font-size: 17px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: 0.3s;
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-family: Arial, Helvetica, sans-serif; /* Fallback for readability */
+        }
+
+        #navbar ul li a:hover {
+            background: crimson;
+            color: white;
+        }
+
+        #logo img {
+            height: 53px;
+            width: 71px;
+            border-radius: 10px;
+        }
+
+        /* SECTIONS COMMON */
+        .section-container {
+            min-height: 80vh;
+            padding: 60px 20px;
+        }
+
+        /* HOME SECTION */
+        #pic {
+            min-height: 90vh;
+            display: flex;
+            justify-content: right;
+            align-items: top;
+            font-size: 2rem;
+            color: rgb(34, 99, 99);
+            font-weight: bold;
+            background: #1c1c1c;
+            background-image: url('https://wallpaperaccess.com/full/2109519.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-top: 4px solid crimson;
+            border-bottom: 4px solid crimson;
+            padding: 40px;
+        }
+
+        #pic h1 {
+            text-shadow: 2px 2px 10px black;
+        }
+
+        #pic, #und-text {
+            animation: colorChange 4s infinite;
+        }
+
+        @keyframes colorChange {
+            0% { color: red; }
+            25% { color: yellow; }
+            50% { color: cyan; }
+            100% { color: lime; }
+        }
+
+        #und {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            padding: 40px 20px;
+            margin: auto;
+            text-align: center;
+            background: #111;
+        }
+
+        #und-text {
+            width: 100%;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        #box {
+            height: 220px;
+            width: 220px;
+            background-color: crimson;
+            border: 3px solid white;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+            transition: 0.3s;
+        }
+
+        #box:hover {
+            transform: scale(1.1);
+            background-color: orange;
+            box-shadow: 0 0 20px rgba(255, 69, 0, 0.8);
+        }
+
+        .ox1 { background-image: url('https://wallpaperaccess.com/full/2324341.png'); background-size: cover; background-position: center; }
+        .ox2 { background-image: url('https://wallpaperaccess.com/full/1316901.jpg'); background-size: cover; background-position: center; }
+        .ox3 { background-image: url('https://wallpaperaccess.com/full/2324390.jpg'); background-size: cover; background-position: center; }
+        .ox4 { background-image: url('https://wallpaperaccess.com/full/2324352.jpg'); background-size: cover; background-position: center; }
+        .ox5 { background-image: url('https://wallpaperaccess.com/full/917642.jpg'); background-size: cover; background-position: center; }
+
+        #spoon {
+            height: 30vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://wallpaperaccess.com/full/7312267.jpg');
+            background-size: cover;
+            background-position: center;
+            text-shadow: 3px 3px 10px black;
+        }
+
+        /* ABOUT SECTION */
+        #about-section {
+            background: #1c1c1c;
+            padding: 80px 10%;
+            text-align: center;
+            border-top: 4px solid crimson;
+        }
+
+        #about-section h1 {
+            font-size: 4rem;
+            color: aqua;
+            margin-bottom: 10px;
+        }
+
+        #about-section h2 {
+            font-size: 2.5rem;
+            color: crimson;
+            margin-bottom: 30px;
+        }
+
+        #about-section p {
+            font-family: Arial, sans-serif;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #ccc;
+            text-align: justify;
+        }
+
+        /* CONTACT SECTION */
+        #contact-section {
+            background: #0f0f0f;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        #contact-section h1 {
+            font-size: 3rem;
+            color: aqua;
+            margin-bottom: 10px;
+        }
+
+        #contact-section p {
+            font-family: Arial, sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #aaa;
+        }
+
+        #contact-section form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 500px;
+            margin: auto;
+            background: #1a1a1a;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.8);
+            border: 2px solid crimson;
+        }
+
+        #contact-section input,
+        #contact-section textarea {
+            margin: 10px 0;
+            padding: 15px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            font-family: Arial, sans-serif;
+        }
+
+        #contact-section input:focus,
+        #contact-section textarea:focus {
+            box-shadow: 0 0 10px aqua;
+        }
+
+        #contact-section button {
+            margin-top: 15px;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            background: crimson;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #contact-section button:hover {
+            background: aqua;
+            color: black;
+        }
+
+        #form-status {
+            font-family: Arial, sans-serif;
+            margin-top: 15px;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* FOOTER */
+        #footer {
+            margin-top: 20px;
+            color: white;
+            background-image: url('https://wallpaperaccess.com/full/11208942.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 40px;
+            text-align: center;
+            font-size: 1.5rem;
+            border-top: 4px solid aqua;
+        }
+
+        /* RESPONSIVE */
+        @media(max-width: 768px) {
+            #navbar {
+                flex-direction: column;
+                padding: 15px;
+            }
+            #navbar ul {
+                flex-direction: column;
+                gap: 15px;
+                margin-left: 0;
+                margin-top: 15px;
+            }
+            #pic, #about-section, #contact-section {
+                padding: 40px 20px;
+            }
+            #pic {
+                font-size: 1.5rem;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+            #spoon {
+                font-size: 2rem;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav id="navbar">
+        <div id="logo">
+            <img src="https://wallpaperaccess.com/full/2794554.jpg" alt="DDA Logo">
+        </div>
+        <ul>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#about-section">ABOUT</a></li>
+            <li><a href="#services">SERVICES</a></li>
+            <li><a href="#contact-section">CONTACT US</a></li>
+        </ul>
+    </nav>
+
+    <main id="home">
+        <section id="pic">
+            <h1>Dinu Baba Dance Academy</h1>
+        </section>
+
+        <section id="und">
+            <div id="und-text">
+                <p>Oh, dance pe chance marle</p>
+                <p>Oh soniya, dance pe chance marle</p>
+                <p>Oh baliye, dance pe chance marle</p>
+                <p>Oh soniya, dance pe chance marle, hain!!</p>
+            </div>
+            
+            <div id="box" class="ox1"></div>
+            <div id="box" class="ox2"></div>
+            <div id="box" class="ox3"></div>
+            <div id="box" class="ox4"></div>
+            <div id="box" class="ox5"></div>
+        </section>
+
+        <section id="spoon">
+            <h2>Our Sponsors</h2>
+        </section>
+    </main>
+
+    <section id="about-section" class="section-container">
+        <h1>Dinu Baba Dance Academy</h1>
+        <h2>About Us</h2>
+        <p>Welcome to Dinu Baba Dance Academy, a place where passion meets performance and dreams take their first step toward reality. Our academy was founded with a simple vision: to provide high-quality dance education that inspires creativity, builds confidence, and helps students discover their true potential.</p>
+        
+        <p>Dance is more than just movement; it is a form of expression, a celebration of culture, and a powerful way to connect with oneself and others. At Dinu Baba Dance Academy, we strive to create an environment where every student can learn, grow, and shine. Whether you are a beginner taking your first dance class or an experienced performer looking to refine your skills, our academy offers a welcoming and supportive atmosphere.</p>
+        
+        <p>Our academy provides training in a variety of dance styles, including Bollywood, Hip-Hop, Contemporary, Freestyle, Classical Fusion, Folk Dance, and many more. Our experienced instructors bring a wealth of knowledge, creativity, and enthusiasm to every class. They focus not only on teaching dance techniques but also on developing discipline, teamwork, stage confidence, and self-expression.</p>
+
+        <p>Physical fitness is another important aspect of our training philosophy. Dance is a fantastic form of exercise that improves flexibility, strength, endurance, coordination, and overall well-being. Through our classes, students not only learn dance techniques but also develop healthy habits that contribute to a balanced lifestyle.</p>
+
+        <p>Whether your goal is to perform on stage, stay fit, learn a new skill, or simply have fun, Dinu Baba Dance Academy is the perfect place to begin your journey. We invite you to join our dance family and experience the excitement, energy, and passion that make our academy special. Welcome to Dinu Baba Dance Academy—where every step counts, every dream matters, and every dancer shines. 🕺💃✨</p>
+    </section>
+
+    <section id="contact-section" class="section-container">
+        <h1>Contact Us</h1>
+        <p>Get in touch with Dinu Baba Dance Academy</p>
+
+        <form id="contactForm">
+            <input type="text" name="name" id="name" placeholder="Enter Your Name" required>
+            <input type="email" name="email" id="email" placeholder="Enter Your Email" required>
+            <input type="tel" name="phone" id="phone" placeholder="Enter Your Phone Number">
+            <textarea name="message" id="message" rows="5" placeholder="Write Your Message" required></textarea>
+            
+            <button type="submit">Send Message</button>
+            <p id="form-status"></p>
+        </form>
+    </section>
+
+    <footer id="footer">
+        © 2026 𝔇𝔦𝔫𝔲 𝔅𝔞𝔟𝔞. 𝔄𝔩𝔩 𝔯𝔦𝔤𝔥𝔱𝔰 𝔯𝔢𝔰𝔢𝔯𝔳𝔢𝔡.
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevents the page from reloading
+            
+            // Getting the status paragraph
+            const statusMessage = document.getElementById('form-status');
+            
+            // Simulating a successful backend submission
+            statusMessage.style.color = 'lime';
+            statusMessage.innerText = '✅ Your message has been sent successfully!';
+            
+            // Reset the form fields
+            this.reset();
+
+            // Hide the success message after 4 seconds
+            setTimeout(() => {
+                statusMessage.innerText = '';
+            }, 4000);
+        });
+    </script>
+</body>
+</html>
